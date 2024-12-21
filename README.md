@@ -19,7 +19,7 @@ UVC_QUIRK_PROBE_DEF 	0x00000100 	Don't request the video probe and commit defaul
 
 UVC_QUIRK_RESTRICT_FRAME_RATE 	0x00000200 	Ignore all frame intervals reported by the device but the first one. This quirk is used for a specific device that reports buggy frame intervals, making the image severely underexposed when selected.
 
-echo 'options uvcvideo quirks=0x100' > /etc/modprobe.d/uvcvideo.conf
+* echo 'options uvcvideo quirks=0x100' > /etc/modprobe.d/uvcvideo.conf
 
 # USB autosuspend
 http://www.ideasonboard.org/uvc/faq/#faq5<br>
