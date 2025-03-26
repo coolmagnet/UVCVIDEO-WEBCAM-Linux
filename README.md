@@ -26,6 +26,9 @@ http://www.ideasonboard.org/uvc/faq/#faq5<br>
 https://www.linuxquestions.org/questions/slackware-14/webcam-often-not-seen-on-boot-4175722346/<br>
 * echo -1 > /sys/module/usbcore/parameters/autosuspend
 
+# Reset Webcam
+v4l2-ctl --verbose --device /dev/video0 --set-ctrl=brightness=128 --set-ctrl=contrast=32 --set-ctrl=saturation=38 --set-ctrl=gain=63 --set-ctrl=sharpness=20
+
 # Capture an image from Webcam
 * v4l2-ctl --device $CAMERA --set-fmt-video=width=640,height=480,pixelformat=MJPG --stream-mmap --stream-to="imagename.jpg" --stream-count=1 &>/dev/null
 
